@@ -15,7 +15,7 @@ function App() {
     setInput("");  // Clear the input field
 
     try {
-      const res = await axios.post("https://ai-chatbot-ux1r.onrender.com", { message: messageToSend });
+      const res = await axios.post("https://ai-chatbot-ux1r.onrender.com/chat", { message: messageToSend });
 
       const botMessage = { role: "bot", text: res.data.response };
       setMessages(prev => [...prev, botMessage]);
